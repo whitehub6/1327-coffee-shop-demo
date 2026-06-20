@@ -1,449 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1327 Coffee Shop - Artisanal Cafe & Safe Space</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Experience the finest artisanal coffee, custom latte art, and gourmet breakfasts at 1327 Coffee Shop, Global City, Virar West. A safe-space community lounge.">
-    <!-- Open Graph / Facebook Link Previews -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="1327 Coffee Shop">
-    <meta property="og:description" content="Artisanal Cafe & Safe Space in Virar West. Experience the finest coffee, custom latte art, and gourmet breakfasts.">
-    <meta property="og:image" content="/cafe_interior.png">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <title>1327 Coffee Shop — Virar West, Mumbai</title>
+    <meta name="description" content="A cozy coffee shop in Virar West, Mumbai. Rich espressos, artisan sandwiches, and world-class brownies. Rated 4.8 ⭐ on Google."/>
+    
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="/src/style.css" type="text/css"/>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="header-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">☕</span> 1327 COFFEE SHOP
-            </a>
-            
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="#about" class="nav-link">Our Story</a></li>
-                    <li><a href="#signatures" class="nav-link">Specials</a></li>
-                    <li><a href="#menu" class="nav-link">The Menu</a></li>
-                    <li><a href="#location" class="nav-link">Location</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <a href="#" class="btn btn-reserve btn-book-trigger">Book a Table</a>
-                <button class="menu-toggle" aria-label="Toggle Menu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
+    <!-- Navigation Header -->
+    <nav style="background:var(--espresso);position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(245,237,214,0.1)">
+        <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:68px">
+            <div style="display:flex;flex-direction:column;line-height:1">
+                <span style="font-family:'Playfair Display', serif;font-weight:700;font-size:1.3rem;color:var(--cream)">1327</span>
+                <span style="font-size:0.65rem;letter-spacing:0.15em;color:var(--caramel);text-transform:uppercase;font-weight:600">Coffee Shop</span>
+            </div>
+            <div style="display:flex;gap:2rem;align-items:center">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#visit" class="nav-link">Visit</a>
+                
+                <!-- Shopping Cart Toggle Button -->
+                <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Open Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadgeCount">0</span>
                 </button>
+                
+                <a href="#contact" class="btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8rem">Reserve</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Mobile Nav Overlay -->
-    <div class="mobile-nav">
-        <ul class="mobile-nav-links">
-            <li><a href="#about" class="mobile-link">Our Story</a></li>
-            <li><a href="#signatures" class="mobile-link">Specials</a></li>
-            <li><a href="#menu" class="mobile-link">The Menu</a></li>
-            <li><a href="#location" class="mobile-link">Location</a></li>
-            <li><a href="#" class="btn btn-reserve-mobile btn-book-trigger">Book a Table</a></li>
-        </ul>
-    </div>
-
-    <!-- Main Content -->
-    <main style="position: relative;">
-        <!-- Ambient Glow Fields -->
-        <div class="glow-bg" style="top: -50px; right: -150px;"></div>
-        <div class="glow-bg" style="top: 40%; left: -200px;"></div>
-        <div class="glow-bg" style="bottom: 10%; right: -150px;"></div>
-
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="hero-tag">📍 Global City, Virar West</span>
-                    <h1 class="hero-title">
-                        Where Every Brew <br>
-                        Tells a <span class="text-glow accent">Story.</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        An aesthetic coffee sanctuary blending double-shot espresso crafts, warm gourmet sourdough sandwiches, and inclusive, cozy safe-space vibes.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#menu" class="btn btn-primary">Explore Menu</a>
-                        <a href="#about" class="btn btn-secondary">Our Philosophy</a>
-                    </div>
+    <!-- Hero Section -->
+    <section style="min-height:100vh;background:linear-gradient(160deg, rgba(44,26,14,0.82) 0%, rgba(44,26,14,0.6) 50%, rgba(74,44,23,0.75) 100%), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:68px">
+        <div style="max-width:1200px;margin:0 auto;padding:4rem 1.5rem;width:100%">
+            <div style="max-width:680px">
+                <div style="margin-bottom:1.5rem">
+                    <span style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(200,129,58,0.2);border:1px solid rgba(200,129,58,0.5);color:var(--caramel);padding:0.35rem 0.9rem;border-radius:999px;font-size:0.8rem;font-weight:600">
+                        <span aria-label="5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span> &nbsp;4.8 · 158 Google Reviews
+                    </span>
+                </div>
+                <h1 class="animate-in delay-1" style="font-family:'Playfair Display', serif;font-size:clamp(2.5rem, 6vw, 4.5rem);font-weight:700;color:var(--cream);line-height:1.1;margin-bottom:1.25rem">
+                    A Caffeinated<br/><em style="color:var(--caramel)">Utopia</em> Awaits
+                </h1>
+                <p class="animate-in delay-2" style="font-size:1.125rem;color:rgba(245,237,214,0.85);line-height:1.7;margin-bottom:2.5rem;max-width:520px">
+                    Nestled in Rustomjee Global City, Virar West — where every cup tells a story and every bite leaves you craving more.
+                </p>
+                <div class="animate-in delay-3" style="display:flex;gap:1rem;flex-wrap:wrap">
+                    <a href="#menu" class="btn-primary">Explore Menu</a>
+                    <a href="#visit" class="btn-outline">Find Us</a>
                 </div>
                 
-                <!-- Hero Image (Cafe Interior) -->
-                <div class="hero-image-wrapper">
-                    <div class="image-wrapper aspect-1-1">
-                        <img src="/cafe_interior.png" alt="1327 Coffee Shop Artisanal Ambiance" loading="eager" fetchpriority="high">
+                <div class="animate-in delay-4" style="display:flex;gap:2rem;margin-top:3.5rem;flex-wrap:wrap">
+                    <div>
+                        <div style="font-family:'Playfair Display', serif;font-size:2rem;font-weight:700;color:var(--caramel)">4.8</div>
+                        <div style="font-size:0.8rem;color:rgba(245,237,214,0.7);letter-spacing:0.05em;text-transform:uppercase;font-weight:500">Google Rating</div>
+                    </div>
+                    <div>
+                        <div style="font-family:'Playfair Display', serif;font-size:2rem;font-weight:700;color:var(--caramel)">158+</div>
+                        <div style="font-size:0.8rem;color:rgba(245,237,214,0.7);letter-spacing:0.05em;text-transform:uppercase;font-weight:500">Happy Reviewers</div>
+                    </div>
+                    <div>
+                        <div style="font-family:'Playfair Display', serif;font-size:2rem;font-weight:700;color:var(--caramel)">₹400</div>
+                        <div style="font-size:0.8rem;color:rgba(245,237,214,0.7);letter-spacing:0.05em;text-transform:uppercase;font-weight:500">Avg. for Two</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Our Story Section -->
-        <section id="about" class="story-section">
-            <div class="container">
-                <div class="story-grid">
-                    <div class="story-content reveal">
-                        <span class="section-tag">Since Opening</span>
-                        <h2 class="section-title">The Safe Space Sanctuary</h2>
-                        <p class="lead-text">
-                            We believe that a great cup of coffee is only as good as the community surrounding it.
-                        </p>
-                        <p class="body-text">
-                            1327 Coffee Shop was founded as a safe harbor for creators, students, and neighbors in Virar West. Located directly opposite Rustomjee International School, we wanted to build a place where you can pause, connect, and feel fully welcome.
-                        </p>
-                        <p class="body-text">
-                            Every single espresso shot is pulled from fresh dark-roasted beans, our sourdough breads are butter-grilled fresh on the griddle, and our space is designed with cozy, intimate corners so you can study, play board games, or disconnect entirely.
-                        </p>
+    <!-- Highlights Banner -->
+    <section style="background:var(--caramel);padding:1.1rem 1.5rem">
+        <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;align-items:center">
+            <div style="display:flex;align-items:center;gap:0.5rem;color:white;font-weight:600;font-size:0.9rem;letter-spacing:0.03em">
+                <span style="font-size:1.2rem">☕</span> Artisan Coffee
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;color:white;font-weight:600;font-size:0.9rem;letter-spacing:0.03em">
+                <span style="font-size:1.2rem">🥪</span> Crafted Sandwiches
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;color:white;font-weight:600;font-size:0.9rem;letter-spacing:0.03em">
+                <span style="font-size:1.2rem">🍫</span> World-Class Brownies
+            </div>
+            <div style="display:flex;align-items:center;gap:0.5rem;color:white;font-weight:600;font-size:0.9rem;letter-spacing:0.03em">
+                <span style="font-size:1.2rem">🎵</span> Cozy Ambiance
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding:6rem 1.5rem;background:var(--milk)">
+        <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:4rem;align-items:center">
+            <div>
+                <span class="section-label">Our Story</span>
+                <h2 style="font-size:clamp(1.8rem, 4vw, 2.8rem);font-weight:700;color:var(--espresso);margin-bottom:1.25rem;line-height:1.2">
+                    More Than a Cup —<br/>It's an Experience
+                </h2>
+                <p style="color:#555;line-height:1.8;margin-bottom:1rem;font-size:0.975rem">
+                    At <strong>1327 Coffee Shop</strong>, we believe coffee is a craft, not a commodity. Tucked inside the vibrant Rustomjee Global City in Virar West, our intimate space was born from a simple obsession: making every cup exceptional.
+                </p>
+                <p style="color:#555;line-height:1.8;margin-bottom:1.75rem;font-size:0.975rem">
+                    Our menu is sweet and short — deliberately curated so that everything on it is something we're proud of. From rich espressos to flavorful snacks, every item is crafted with precision and love. Our brownie? People come from across Virar just for it.
+                </p>
+                <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+                    <div style="background:white;border:1px solid #e8d5b0;border-radius:8px;padding:1rem 1.25rem;flex:1;min-width:120px">
+                        <div style="font-family:'Playfair Display', serif;font-size:1.6rem;font-weight:700;color:var(--caramel)">10:30</div>
+                        <div style="font-size:0.78rem;color:#888;text-transform:uppercase;letter-spacing:0.05em;font-weight:500">Opens Daily</div>
                     </div>
-                    
-                    <!-- 1:1 Story Image -->
-                    <div class="story-image-column reveal">
-                        <div class="image-wrapper aspect-1-1">
-                            <img src="/latte_art.png" alt="Artisanal Heart Latte Pour" loading="lazy">
-                        </div>
+                    <div style="background:white;border:1px solid #e8d5b0;border-radius:8px;padding:1rem 1.25rem;flex:1;min-width:120px">
+                        <div style="font-family:'Playfair Display', serif;font-size:1.6rem;font-weight:700;color:var(--caramel)">4.8 ★</div>
+                        <div style="font-size:0.78rem;color:#888;text-transform:uppercase;letter-spacing:0.05em;font-weight:500">Google Rating</div>
+                    </div>
+                    <div style="background:white;border:1px solid #e8d5b0;border-radius:8px;padding:1rem 1.25rem;flex:1;min-width:120px">
+                        <div style="font-family:'Playfair Display', serif;font-size:1.6rem;font-weight:700;color:var(--caramel)">10%</div>
+                        <div style="font-size:0.78rem;color:#888;text-transform:uppercase;letter-spacing:0.05em;font-weight:500">Dine-in Discount</div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Signatures / House Specials -->
-        <section id="signatures" class="signature-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <span class="section-tag">Gourmet Highlights</span>
-                    <h2 class="section-title">Chef's Masterpieces</h2>
-                    <p class="section-subtitle">Our most-loved visual and culinary pairings, crafted to order daily.</p>
-                </div>
-                
-                <div class="signature-grid">
-                    <!-- Signature Item 1 -->
-                    <div class="signature-card reveal">
-                        <div class="sig-image-wrapper">
-                            <div class="image-wrapper aspect-4-3">
-                                <img src="/avocado_toast.png" alt="Signature Avocado Smash Toast" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sig-details">
-                            <span class="sig-category">Breakfast Craft</span>
-                            <h3>Avocado Smash Toast</h3>
-                            <p>Fresh artisanal sourdough toast generously layered with sliced ripe avocado, zesty scrambled eggs, organic cherry tomatoes, and served with a dressed rocket side salad.</p>
-                        </div>
-                    </div>
-
-                    <!-- Signature Item 2 -->
-                    <div class="signature-card reveal">
-                        <div class="sig-image-wrapper">
-                            <div class="image-wrapper aspect-4-3">
-                                <img src="/chocolate_toast.png" alt="Signature Chocolate Sesame Toast" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sig-details">
-                            <span class="sig-category">Artisan Dessert</span>
-                            <h3>Chocolate Sesame Toast</h3>
-                            <p>Artisanal sourdough slices generously spread with rich hazelnut chocolate cream, topped with a zesty sprinkle of black and white sesame seeds.</p>
-                        </div>
-                    </div>
-
-                    <!-- Signature Item 3 -->
-                    <div class="signature-card reveal">
-                        <div class="sig-image-wrapper">
-                            <div class="image-wrapper aspect-4-3">
-                                <img src="/egg_toast.png" alt="Sunny-Side Fried Egg Sourdough Toast" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="sig-details">
-                            <span class="sig-category">Comfort Eat</span>
-                            <h3>Sunny-Side Sourdough</h3>
-                            <p>Crispy butter-grilled sourdough bread topped with a perfectly fried egg, finished with fresh cracked black pepper, fresh lettuce, and cherry tomatoes.</p>
-                        </div>
-                    </div>
-                </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&amp;q=80" alt="Coffee being poured" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;grid-row:span 2"/>
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&amp;q=80" alt="Cafe interior" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px"/>
+                <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&amp;q=80" alt="Brownie dessert" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px"/>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Interactive Dining Menu -->
-        <section id="menu" class="menu-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <span class="section-tag">Our Ledger</span>
-                    <h2 class="section-title">The Curated Menu</h2>
-                    <p class="section-subtitle">Select a tab below to browse our fresh hot brews, cold shakes, and sandwiches.</p>
-                </div>
+    <!-- Gallery Section -->
+    <section style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));height:auto;overflow:hidden">
+        <div style="overflow:hidden;aspect-ratio:16/9"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&amp;q=80" alt="Gallery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s"/></div>
+        <div style="overflow:hidden;aspect-ratio:16/9"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&amp;q=80" alt="Gallery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s"/></div>
+        <div style="overflow:hidden;aspect-ratio:16/9"><img src="https://images.unsplash.com/photo-1464979681340-bdd28a61699e?w=400&amp;q=80" alt="Gallery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s"/></div>
+        <div style="overflow:hidden;aspect-ratio:16/9"><img src="https://images.unsplash.com/photo-1517959105821-eae5efe8dba6?w=400&amp;q=80" alt="Gallery" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s"/></div>
+    </section>
 
-                <!-- Menu Tabs -->
-                <div class="menu-tabs reveal">
-                    <button class="tab-btn active" data-tab="coffees">Rich Coffees</button>
-                    <button class="tab-btn" data-tab="bites">Comfort Bites</button>
-                    <button class="tab-btn" data-tab="desserts">Desserts & Shakes</button>
-                </div>
-
-                <!-- Menu Content -->
-                <div class="menu-content-container reveal">
-                    
-                    <!-- Coffees Content -->
-                    <div class="menu-tab-content active" id="coffees">
-                        <div class="menu-grid-items">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Classic Espresso</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹100</span>
-                                </div>
-                                <p class="menu-item-description">Concentrated single shot pulled from freshly ground premium arabica beans.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Artisanal Cappuccino</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹140</span>
-                                </div>
-                                <p class="menu-item-description">Espresso shot topped with thick hot milk foam and microfoam art.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Iced Americano</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹150</span>
-                                </div>
-                                <p class="menu-item-description">A crowd-favorite double shot of espresso served cold over heavy ice and mineral water.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Vietnamese Coffee</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹180</span>
-                                </div>
-                                <p class="menu-item-description">Slow-dripped dark roast coffee filtered over a sweet layer of condensed milk.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Vietnamese Iced Coconut Coffee</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹210</span>
-                                </div>
-                                <p class="menu-item-description">Authentic dark roast coffee shaken with cold coconut milk syrup, served over crushed ice.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Affogato Espresso</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹160</span>
-                                </div>
-                                <p class="menu-item-description">A scoop of creamy vanilla gelato drowned in a hot shot of espresso.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bites Content -->
-                    <div class="menu-tab-content" id="bites">
-                        <div class="menu-grid-items">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Salami & Cheese Toast</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹190</span>
-                                </div>
-                                <p class="menu-item-description">Grilled brown bread sandwich loaded with premium salami slices and melted cheddar.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Brown Bread Veggie Sandwich</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹150</span>
-                                </div>
-                                <p class="menu-item-description">Healthy grain bread stuffed with fresh cucumber, tomato slices, lettuce, and mint spread.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Basil Pesto panini</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹210</span>
-                                </div>
-                                <p class="menu-item-description">Crispy pressed panini loaded with cherry tomatoes, mozzarella slices, and green basil pesto.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Loaded Garlic fries</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹170</span>
-                                </div>
-                                <p class="menu-item-description">Double-fried french fries tossed in garlic seasoning and topped with warm cheddar sauce.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Desserts Content -->
-                    <div class="menu-tab-content" id="desserts">
-                        <div class="menu-grid-items">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Classic Baked Cheesecake</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹180</span>
-                                </div>
-                                <p class="menu-item-description">Our signature rich cream cheese cake baked on a sweet buttery graham crust.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Oreo Crunch Milkshake</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹190</span>
-                                </div>
-                                <p class="menu-item-description">Chilled milkshake blended with premium vanilla gelato, milk, and chocolate Oreos.</p>
-                            </div>
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h4 class="menu-item-title">Red Velvet Sponge Slice</h4>
-                                    <span class="menu-item-divider"></span>
-                                    <span class="menu-item-price">₹150</span>
-                                </div>
-                                <p class="menu-item-description">Fluffy cocoa-sponge slice layered with smooth vanilla cream cheese frosting.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+    <!-- Menu Section -->
+    <section id="menu" style="padding:6rem 1.5rem;background:#f9f4eb">
+        <div style="max-width:1100px;margin:0 auto">
+            <div style="text-align:center;margin-bottom:3.5rem">
+                <span class="section-label">What We Serve</span>
+                <h2 style="font-size:clamp(1.8rem, 4vw, 2.8rem);font-weight:700;color:var(--espresso);margin-bottom:0.75rem">Our Menu</h2>
+                <p style="color:#666;max-width:500px;margin:0 auto;font-size:0.975rem;line-height:1.7">Sweet and short — every item carefully chosen, every dish a reason to come back.</p>
             </div>
-        </section>
-
-
-
-        <!-- Locations / Outlets Section -->
-        <section id="location" class="outlets-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <span class="section-tag">Find Us</span>
-                    <h2 class="section-title">Our Location</h2>
-                    <p class="section-subtitle">Stop by for a hot cup of Vietnamese coffee or a salami sandwich.</p>
-                </div>
-
-                <div class="outlets-grid">
-                    <!-- Outlet Card -->
-                    <div class="outlet-card reveal">
-                        <div class="outlet-header">
-                            <h3>Global City Virar</h3>
-                            <span class="badge">Safe Space Cafe</span>
-                        </div>
-                        <div class="outlet-body">
-                            <p class="address">1327, Global City, Opposite Rustomjee International School, Virar West, Maharashtra 401303</p>
-                            <div class="outlet-detail">
-                                <span class="label">Timings:</span>
-                                <span class="value">9:30 AM – 10:30 PM (Daily)</span>
-                            </div>
-                            <div class="outlet-detail">
-                                <span class="label">Contact:</span>
-                                <span class="value">+91 91523 13270</span>
-                            </div>
-                        </div>
-                        <div class="outlet-footer">
-                            <a href="https://maps.google.com/?q=1327+COFFEE+SHOP+Virar" target="_blank" rel="noopener" class="btn-map">Open in Google Maps ↗</a>
-                        </div>
-                    </div>
-
-                    <!-- Outlet Map -->
-                    <div class="reveal">
-                        <div class="image-wrapper aspect-16-9" style="height: 100%; border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.3414592750383!2d72.80494297615024!3d19.474750438843924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a999ce2875f9%3A0xbdca5ea155fb3c70!2s1327%20COFFEE%20SHOP!5e0!3m2!1sen!2sin!4v1718800000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Table Reservation Modal -->
-    <div class="modal" id="bookingModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close Modal">✕</button>
-            <h3 class="modal-title">Book a Table</h3>
-            <p class="modal-subtitle">Reserve a cozy corner at 1327 Coffee Shop Virar.</p>
             
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="guestName">Your Name</label>
-                    <input type="text" id="guestName" class="form-control" placeholder="Rohan Ramdas" required>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2.5rem">
+                
+                <!-- Category: Coffee -->
+                <div class="menu-category-block">
+                    <div class="menu-category-header">
+                        <span class="menu-category-icon">☕</span>
+                        <span class="menu-category-title">Coffee &amp; Espresso</span>
+                    </div>
+                    <div class="menu-items-container">
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Signature Espresso</div>
+                                <div class="menu-item-desc">Double shot of our house-blend beans, rich and velvety with notes of dark chocolate</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹120</div>
+                                <button class="btn-add-item" data-id="coffee-espresso" data-name="Signature Espresso" data-price="120">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Cappuccino</div>
+                                <div class="menu-item-desc">Perfectly pulled espresso topped with silky steamed milk and dry foam</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹150</div>
+                                <button class="btn-add-item" data-id="coffee-cappuccino" data-name="Cappuccino" data-price="150">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Cold Brew</div>
+                                <div class="menu-item-desc">Steeped for 18 hours for a smooth, bold, low-acid brew served over ice</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹160</div>
+                                <button class="btn-add-item" data-id="coffee-coldbrew" data-name="Cold Brew" data-price="160">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Café Latte</div>
+                                <div class="menu-item-desc">Espresso with steamed whole milk and a whisper of foam</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹140</div>
+                                <button class="btn-add-item" data-id="coffee-latte" data-name="Café Latte" data-price="140">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Mocha</div>
+                                <div class="menu-item-desc">Rich espresso meets Belgian dark chocolate, topped with cream</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹170</div>
+                                <button class="btn-add-item" data-id="coffee-mocha" data-name="Mocha" data-price="170">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Flat White</div>
+                                <div class="menu-item-desc">Ristretto shots in a smaller cup with velvety micro-foam</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹155</div>
+                                <button class="btn-add-item" data-id="coffee-flatwhite" data-name="Flat White" data-price="155">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="partySize">Party Size</label>
-                    <select id="partySize" class="form-control" required>
-                        <option value="1">1 Person</option>
-                        <option value="2" selected>2 People</option>
-                        <option value="4">4 People</option>
-                        <option value="6">6 People</option>
-                    </select>
+
+                <!-- Category: Desserts -->
+                <div class="menu-category-block">
+                    <div class="menu-category-header">
+                        <span class="menu-category-icon">🍫</span>
+                        <span class="menu-category-title">Desserts &amp; Sweets</span>
+                    </div>
+                    <div class="menu-items-container">
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">The 1327 Brownie</div>
+                                <div class="menu-item-desc">Our legendary dense, fudgy brownie — warm from the oven, with a glossy crust. World class.</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹110</div>
+                                <button class="btn-add-item" data-id="dessert-brownie" data-name="The 1327 Brownie" data-price="110">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Blueberry Cheesecake</div>
+                                <div class="menu-item-desc">New York-style baked cheesecake with a fresh blueberry compote</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹140</div>
+                                <button class="btn-add-item" data-id="dessert-cheesecake" data-name="Blueberry Cheesecake" data-price="140">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Tiramisu</div>
+                                <div class="menu-item-desc">Classic Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹160</div>
+                                <button class="btn-add-item" data-id="dessert-tiramisu" data-name="Tiramisu" data-price="160">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Affogato</div>
+                                <div class="menu-item-desc">A scoop of vanilla gelato drowned in a freshly pulled espresso shot</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹130</div>
+                                <button class="btn-add-item" data-id="dessert-affogato" data-name="Affogato" data-price="130">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="bookingDate">Date</label>
-                    <input type="date" id="bookingDate" class="form-control" required>
+
+                <!-- Category: Food -->
+                <div class="menu-category-block">
+                    <div class="menu-category-header">
+                        <span class="menu-category-icon">🥪</span>
+                        <span class="menu-category-title">Food &amp; Bites</span>
+                    </div>
+                    <div class="menu-items-container">
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Grilled Chicken Sandwich</div>
+                                <div class="menu-item-desc">Herb-marinated grilled chicken, lettuce, tomato, and garlic aioli on toasted sourdough</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹220</div>
+                                <button class="btn-add-item" data-id="food-chickensandwich" data-name="Grilled Chicken Sandwich" data-price="220">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Veggie Club</div>
+                                <div class="menu-item-desc">Roasted bell pepper, avocado spread, cucumber, and cream cheese on multigrain bread</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹190</div>
+                                <button class="btn-add-item" data-id="food-veggieclub" data-name="Veggie Club" data-price="190">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Egg &amp; Cheese Toast</div>
+                                <div class="menu-item-desc">Scrambled eggs, cheddar, and herbs on thick-cut artisan toast</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹170</div>
+                                <button class="btn-add-item" data-id="food-eggtoast" data-name="Egg &amp; Cheese Toast" data-price="170">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Pasta Aglio e Olio</div>
+                                <div class="menu-item-desc">Al dente spaghetti tossed with garlic, olive oil, chilli flakes, and parmesan</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹240</div>
+                                <button class="btn-add-item" data-id="food-pasta" data-name="Pasta Aglio e Olio" data-price="240">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Margherita Toast Pizza</div>
+                                <div class="menu-item-desc">Crispy base with San Marzano tomato sauce, fresh mozzarella, and basil</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹260</div>
+                                <button class="btn-add-item" data-id="food-pizza" data-name="Margherita Toast Pizza" data-price="260">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">French Fries</div>
+                                <div class="menu-item-desc">Golden thin-cut fries seasoned with sea salt and paprika, served with dip</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹130</div>
+                                <button class="btn-add-item" data-id="food-fries" data-name="French Fries" data-price="130">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="bookingTime">Preferred Time</label>
-                    <input type="time" id="bookingTime" class="form-control" min="09:30" max="22:00" required>
+
+                <!-- Category: Beverages -->
+                <div class="menu-category-block">
+                    <div class="menu-category-header">
+                        <span class="menu-category-icon">🥤</span>
+                        <span class="menu-category-title">Beverages</span>
+                    </div>
+                    <div class="menu-items-container">
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Fresh Lime Soda</div>
+                                <div class="menu-item-desc">Chilled sparkling water with fresh lime juice, choice of sweet or salted</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹90</div>
+                                <button class="btn-add-item" data-id="bev-limesoda" data-name="Fresh Lime Soda" data-price="90">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Mango Lassi</div>
+                                <div class="menu-item-desc">Thick, creamy blend of Alphonso mango pulp and chilled yogurt</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹120</div>
+                                <button class="btn-add-item" data-id="bev-mangolassi" data-name="Mango Lassi" data-price="120">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Iced Tea</div>
+                                <div class="menu-item-desc">House-brewed black tea with lemon and mint, lightly sweetened</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹100</div>
+                                <button class="btn-add-item" data-id="bev-icedtea" data-name="Iced Tea" data-price="100">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="menu-card">
+                            <div>
+                                <div class="menu-item-name">Hot Chocolate</div>
+                                <div class="menu-item-desc">Premium Belgian cocoa with steamed milk, topped with marshmallows</div>
+                            </div>
+                            <div class="menu-item-price-wrapper">
+                                <div class="menu-item-price">₹150</div>
+                                <button class="btn-add-item" data-id="bev-hotchocolate" data-name="Hot Chocolate" data-price="150">+ Add</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary btn-submit">Request Booking</button>
-                </div>
-            </form>
+
+            </div>
+            
+            <div style="text-align:center;margin-top:1.5rem">
+                <p style="color:#888;font-size:0.85rem">All prices inclusive of taxes. Menu subject to change. Average cost ₹400 for two.</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section style="padding:6rem 1.5rem;background:var(--espresso)">
+        <div style="max-width:1100px;margin:0 auto">
+            <div style="text-align:center;margin-bottom:3rem">
+                <span style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--caramel);display:block;margin-bottom:0.75rem">What People Say</span>
+                <h2 style="font-family:'Playfair Display', serif;font-size:clamp(1.8rem, 4vw, 2.5rem);font-weight:700;color:var(--cream);margin-bottom:0.5rem">Guest Reviews</h2>
+                <div style="color:var(--caramel);font-size:1rem;font-weight:600">
+                    <span aria-label="5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span> &nbsp;4.8 / 5 on Google · 158 Reviews
+                </div>
+            </div>
+            
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem">
+                <div class="review-card">
+                    <div style="margin-bottom:0.75rem">
+                        <span aria-label="5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+                    </div>
+                    <p style="color:#444;line-height:1.7;font-style:italic;margin-bottom:1rem;font-size:0.925rem">
+                        "Walking into 1327 Coffee Shop is like catapulting yourself into a caffeinated utopia. The host is an expert with caffeine-induced drinks and the brownie we had was out of this world!"
+                    </p>
+                    <div style="font-weight:600;color:var(--espresso);font-size:0.875rem">— Priya M.</div>
+                </div>
+                <div class="review-card">
+                    <div style="margin-bottom:0.75rem">
+                        <span aria-label="5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+                    </div>
+                    <p style="color:#444;line-height:1.7;font-style:italic;margin-bottom:1rem;font-size:0.925rem">
+                        "The menu is sweet and short — every item is crafted with care. The cold brew here is easily the best in Virar. Cozy, intimate, and the staff is incredibly welcoming."
+                    </p>
+                    <div style="font-weight:600;color:var(--espresso);font-size:0.875rem">— Rohan S.</div>
+                </div>
+                <div class="review-card">
+                    <div style="margin-bottom:0.75rem">
+                        <span aria-label="5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></span>
+                    </div>
+                    <p style="color:#444;line-height:1.7;font-style:italic;margin-bottom:1rem;font-size:0.925rem">
+                        "Came for the coffee, stayed for the ambiance. This isn't just a coffee shop — it's a full-blown sensory experience. The espresso is exceptional and the tiramisu is divine."
+                    </p>
+                    <div style="font-weight:600;color:var(--espresso);font-size:0.875rem">— Aisha K.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit / Contact Section -->
+    <section id="visit" style="padding:6rem 1.5rem;background:var(--milk)">
+        <div style="max-width:1100px;margin:0 auto">
+            <div style="text-align:center;margin-bottom:3.5rem">
+                <span class="section-label">Come Visit Us</span>
+                <h2 style="font-family:'Playfair Display', serif;font-size:clamp(1.8rem, 4vw, 2.8rem);font-weight:700;color:var(--espresso)">Find 1327 Coffee Shop</h2>
+            </div>
+            
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem">
+                <div class="info-card">
+                    <h3 style="font-family:'Playfair Display', serif;font-size:1.25rem;color:var(--espresso);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">📍 Address</h3>
+                    <address style="font-style:normal;color:#555;line-height:1.8;font-size:0.95rem">
+                        Plot No. 1327,<br/>
+                        Rustomjee Global City,<br/>
+                        Virar West, Mumbai<br/>
+                        Maharashtra – 401305<br/>
+                        <em style="color:#888;font-size:0.85rem">(Opposite Rustomjee)</em>
+                    </address>
+                    <a href="https://maps.app.goo.gl/3BjKwew2Av6wAP4D7" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:1.5rem;display:inline-block;font-size:0.8rem;padding:0.65rem 1.4rem">Get Directions</a>
+                </div>
+                
+                <div class="info-card">
+                    <h3 style="font-family:'Playfair Display', serif;font-size:1.25rem;color:var(--espresso);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">🕙 Opening Hours</h3>
+                    <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">10:30 AM – 10:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">10:30 AM – 10:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">10:30 AM – 10:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">10:30 AM – 10:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">10:30 AM – 11:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">10:00 AM – 11:00 PM</span></div>
+                    <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">10:00 AM – 11:00 PM</span></div>
+                </div>
+                
+                <div class="info-card">
+                    <h3 style="font-family:'Playfair Display', serif;font-size:1.25rem;color:var(--espresso);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">🎁 Offers &amp; Contact</h3>
+                    <div style="margin-bottom:1.25rem">
+                        <div style="background:rgba(200,129,58,0.1);border:1px solid rgba(200,129,58,0.3);border-radius:6px;padding:1rem;margin-bottom:0.75rem">
+                            <div style="font-weight:600;color:var(--caramel);margin-bottom:0.25rem">🏷️ Flat 10% Off</div>
+                            <div style="font-size:0.85rem;color:#666">On total dine-in bill via Swiggy Dineout</div>
+                        </div>
+                        <div style="background:rgba(200,129,58,0.1);border:1px solid rgba(200,129,58,0.3);border-radius:6px;padding:1rem">
+                            <div style="font-weight:600;color:var(--caramel);margin-bottom:0.25rem">💳 Bank Cashback</div>
+                            <div style="font-size:0.85rem;color:#666">HDFC &amp; select bank card offers available</div>
+                        </div>
+                    </div>
+                    <div style="border-top:1px solid #f0e8d8;padding-top:1rem">
+                        <div style="font-size:0.875rem;color:#555;margin-bottom:0.4rem"><strong>Cuisine:</strong> American · Café</div>
+                        <div style="font-size:0.875rem;color:#555;margin-bottom:0.4rem"><strong>Avg. cost:</strong> ₹400 for two</div>
+                        <div style="font-size:0.875rem;color:#555"><strong>Parking:</strong> Available nearby</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Embedded Google Map -->
+            <div style="margin-top:2.5rem;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(44,26,14,0.1);border:1px solid var(--latte)">
+                <iframe title="1327 Coffee Shop Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.448!2d72.8075178!3d19.4747454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a999ce2875f9%3A0xbdca5ea155fb3c70!2s1327%20COFFEE%20SHOP!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin" width="100%" height="380" style="border:0;display:block" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Reservation Section -->
+    <section id="contact" style="padding:6rem 1.5rem;background:linear-gradient(135deg, rgba(44,26,14,0.92), rgba(74,44,23,0.88)), url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1400&amp;q=80') center/cover no-repeat;text-align:center">
+        <div style="max-width:640px;margin:0 auto">
+            <span style="font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--caramel);display:block;margin-bottom:0.75rem">Reserve a Table</span>
+            <h2 style="font-family:'Playfair Display', serif;font-size:clamp(1.8rem, 4vw, 2.8rem);font-weight:700;color:var(--cream);margin-bottom:1rem;line-height:1.2">Your Next Favourite<br/>Coffee Moment Awaits</h2>
+            <p style="color:rgba(245,237,214,0.75);font-size:1rem;line-height:1.7;margin-bottom:2.5rem">Walk in or call ahead — we'd love to have you. Experience the warmth, the aromas, and the flavours that keep our guests coming back.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+                <a href="tel:+919152313270" class="btn-primary">Call to Reserve</a>
+                <a href="https://maps.app.goo.gl/3BjKwew2Av6wAP4D7" target="_blank" rel="noopener noreferrer" class="btn-outline">Get Directions</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <span class="logo-icon">☕</span> 1327 COFFEE SHOP
-                </a>
-                <p class="footer-desc">
-                    Artisanal coffee brewing, fresh sourdough paninis, and cozy safe space lounges in Global City, Virar West.
-                </p>
+    <footer style="background:var(--espresso);color:rgba(255,255,255,0.55);padding:3rem 1.5rem 2rem">
+        <div style="max-width:1100px;margin:0 auto">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:2rem;margin-bottom:2.5rem">
+                <div>
+                    <div style="font-family:'Playfair Display', serif;font-size:1.4rem;font-weight:700;color:var(--cream);margin-bottom:0.25rem">1327 Coffee Shop</div>
+                    <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--caramel);margin-bottom:1rem">Virar West · Mumbai</div>
+                    <p style="font-size:0.875rem;line-height:1.7">A caffeinated utopia nestled in Rustomjee Global City. Rated 4.8 ★ on Google.</p>
+                </div>
+                <div>
+                    <div style="font-weight:600;color:white;margin-bottom:1rem;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.08em">Quick Links</div>
+                    <a href="#menu" style="display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:0.5rem;font-size:0.875rem;transition:color 0.2s">Menu</a>
+                    <a href="#about" style="display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:0.5rem;font-size:0.875rem;transition:color 0.2s">About</a>
+                    <a href="#visit" style="display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:0.5rem;font-size:0.875rem;transition:color 0.2s">Visit Us</a>
+                    <a href="#contact" style="display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:0.5rem;font-size:0.875rem;transition:color 0.2s">Reserve</a>
+                </div>
+                <div>
+                    <div style="font-weight:600;color:white;margin-bottom:1rem;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.08em">Location</div>
+                    <address style="font-style:normal;font-size:0.875rem;line-height:1.8">
+                        Plot No. 1327, Rustomjee Global City<br/>
+                        Virar West, Mumbai – 401305<br/>
+                        Maharashtra, India
+                    </address>
+                </div>
+                <div>
+                    <div style="font-weight:600;color:white;margin-bottom:1rem;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.08em">Hours</div>
+                    <div style="font-size:0.875rem;line-height:1.8">
+                        Mon – Fri: 10:30 AM – 10:00 PM<br/>
+                        Sat – Sun: 10:00 AM – 11:00 PM
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="#about">Our Story</a></li>
-                    <li><a href="#signatures">Chef Specials</a></li>
-                    <li><a href="#menu">The Menu</a></li>
-                    <li><a href="#location">Find Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a></li>
-                    <li><a href="https://zomato.com" target="_blank" rel="noopener">Zomato</a></li>
-                    <li><a href="https://swiggy.com" target="_blank" rel="noopener">Swiggy</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 1327 Coffee Shop. All rights reserved. Handcrafted digital coffee experience.</p>
+            <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem">
+                <span>© 2026 1327 Coffee Shop. All rights reserved.</span>
+                <span>Virar West · Rustomjee Global City · Mumbai</span>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Shopping Cart Drawer Overlay and Content -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Coffee Cart</h3>
+            <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Cart">✕</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsList">
+            <!-- Dynamic Cart Items Rendered Here -->
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>CGST (9%)</span>
+                <span id="cartCGST">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span>SGST (9%)</span>
+                <span id="cartSGST">₹0</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <form class="checkout-form" id="checkoutForm">
+                <input type="text" id="checkoutName" class="checkout-input" placeholder="Your Name" required/>
+                <input type="tel" id="checkoutPhone" class="checkout-input" placeholder="Phone Number (WhatsApp)" required/>
+                <select id="checkoutType" class="checkout-input" required>
+                    <option value="Dine-in">Dine-in (Swiggy 10% discount applies)</option>
+                    <option value="Takeaway">Takeaway</option>
+                </select>
+                <button type="submit" class="btn-primary btn-checkout">Place Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- WhatsApp Chatbot Widget -->
+    <div class="whatsapp-bot-container">
+        <button class="whatsapp-launcher-btn" id="waLauncherBtn" aria-label="Open Chatbot">💬</button>
+        <div class="whatsapp-chat-bubble" id="waChatBubble">
+            <div class="whatsapp-bot-header">
+                <div class="bot-avatar">🤖</div>
+                <div class="bot-info">
+                    <div class="bot-name">1327 Barista Bot</div>
+                    <div class="bot-status">Online</div>
+                </div>
+            </div>
+            <div class="whatsapp-bot-messages" id="botMessagesList">
+                <div class="bot-msg">Hey there! Welcome to 1327 Coffee Shop in Virar West. How can I help you today?</div>
+            </div>
+            <div class="whatsapp-bot-options" id="botOptionsContainer">
+                <button class="bot-option-btn" data-action="hours">🕙 What are your hours?</button>
+                <button class="bot-option-btn" data-action="discount">🏷️ Flat 10% Swiggy Offer?</button>
+                <button class="bot-option-btn" data-action="directions">📍 Get Directions?</button>
+                <button class="bot-option-btn" data-action="human">👤 Chat with Human Barista</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Logic Script -->
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
