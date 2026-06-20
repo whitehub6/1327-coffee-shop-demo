@@ -127,224 +127,238 @@
                 <p style="color:#666;max-width:500px;margin:0 auto;font-size:0.975rem;line-height:1.7">Sweet and short — every item carefully chosen, every dish a reason to come back.</p>
             </div>
             
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2.5rem">
+            <div class="menu-grid">
                 
-                <!-- Category: Coffee -->
-                <div class="menu-category-block">
-                    <div class="menu-category-header">
-                        <span class="menu-category-icon">☕</span>
-                        <span class="menu-category-title">Coffee &amp; Espresso</span>
+                <!-- Row 1: Coffee and Desserts -->
+                <div class="menu-row">
+                    <!-- Column 1: Coffee & Espresso -->
+                    <div class="menu-column">
+                        <h3 class="menu-column-header">Coffee &amp; Espresso</h3>
+                        <div class="menu-items-container">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Signature Espresso</h4>
+                                    <p class="menu-item-desc">Double shot of our house-blend beans, rich and velvety with notes of dark chocolate</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹120</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-espresso" data-name="Signature Espresso" data-price="120">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Cappuccino</h4>
+                                    <p class="menu-item-desc">Perfectly pulled espresso topped with silky steamed milk and dry foam</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹150</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-cappuccino" data-name="Cappuccino" data-price="150">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Cold Brew</h4>
+                                    <p class="menu-item-desc">Steeped for 18 hours for a smooth, bold, low-acid brew served over ice</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹160</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-coldbrew" data-name="Cold Brew" data-price="160">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Café Latte</h4>
+                                    <p class="menu-item-desc">Espresso with steamed whole milk and a whisper of foam</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹140</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-latte" data-name="Café Latte" data-price="140">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Mocha</h4>
+                                    <p class="menu-item-desc">Rich espresso meets Belgian dark chocolate, topped with cream</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹170</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-mocha" data-name="Mocha" data-price="170">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Flat White</h4>
+                                    <p class="menu-item-desc">Ristretto shots in a smaller cup with velvety micro-foam</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹155</span>
+                                    <button class="btn-add-item btn-add-square" data-id="coffee-flatwhite" data-name="Flat White" data-price="155">+</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-items-container">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Signature Espresso</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹120</span>
-                                <button class="btn-add-item" data-id="coffee-espresso" data-name="Signature Espresso" data-price="120">+ Add</button>
+
+                    <!-- Column 2: Desserts & Sweets -->
+                    <div class="menu-column">
+                        <h3 class="menu-column-header">Desserts &amp; Sweets</h3>
+                        <div class="menu-items-container">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">The 1327 Brownie</h4>
+                                    <p class="menu-item-desc">Our legendary dense, fudgy brownie — warm from the oven, with a glossy crust. World class.</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹110</span>
+                                    <button class="btn-add-item btn-add-square" data-id="dessert-brownie" data-name="The 1327 Brownie" data-price="110">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Double shot of our house-blend beans, rich and velvety with notes of dark chocolate</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Cappuccino</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹150</span>
-                                <button class="btn-add-item" data-id="coffee-cappuccino" data-name="Cappuccino" data-price="150">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Blueberry Cheesecake</h4>
+                                    <p class="menu-item-desc">New York-style baked cheesecake with a fresh blueberry compote</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹140</span>
+                                    <button class="btn-add-item btn-add-square" data-id="dessert-cheesecake" data-name="Blueberry Cheesecake" data-price="140">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Perfectly pulled espresso topped with silky steamed milk and dry foam</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Cold Brew</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹160</span>
-                                <button class="btn-add-item" data-id="coffee-coldbrew" data-name="Cold Brew" data-price="160">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Tiramisu</h4>
+                                    <p class="menu-item-desc">Classic Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹160</span>
+                                    <button class="btn-add-item btn-add-square" data-id="dessert-tiramisu" data-name="Tiramisu" data-price="160">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Steeped for 18 hours for a smooth, bold, low-acid brew served over ice</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Café Latte</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹140</span>
-                                <button class="btn-add-item" data-id="coffee-latte" data-name="Café Latte" data-price="140">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Affogato</h4>
+                                    <p class="menu-item-desc">A scoop of vanilla gelato drowned in a freshly pulled espresso shot</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹130</span>
+                                    <button class="btn-add-item btn-add-square" data-id="dessert-affogato" data-name="Affogato" data-price="130">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Espresso with steamed whole milk and a whisper of foam</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Mocha</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹170</span>
-                                <button class="btn-add-item" data-id="coffee-mocha" data-name="Mocha" data-price="170">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Rich espresso meets Belgian dark chocolate, topped with cream</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Flat White</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹155</span>
-                                <button class="btn-add-item" data-id="coffee-flatwhite" data-name="Flat White" data-price="155">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Ristretto shots in a smaller cup with velvety micro-foam</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Category: Desserts -->
-                <div class="menu-category-block">
-                    <div class="menu-category-header">
-                        <span class="menu-category-icon">🍫</span>
-                        <span class="menu-category-title">Desserts &amp; Sweets</span>
+                <!-- Row 2: Food and Beverages -->
+                <div class="menu-row">
+                    <!-- Column 3: Food & Bites -->
+                    <div class="menu-column">
+                        <h3 class="menu-column-header">Food &amp; Bites</h3>
+                        <div class="menu-items-container">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Grilled Chicken Sandwich</h4>
+                                    <p class="menu-item-desc">Herb-marinated grilled chicken, lettuce, tomato, and garlic aioli on toasted sourdough</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹220</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-chickensandwich" data-name="Grilled Chicken Sandwich" data-price="220">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Veggie Club</h4>
+                                    <p class="menu-item-desc">Roasted bell pepper, avocado spread, cucumber, and cream cheese on multigrain bread</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹190</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-veggieclub" data-name="Veggie Club" data-price="190">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Egg &amp; Cheese Toast</h4>
+                                    <p class="menu-item-desc">Scrambled eggs, cheddar, and herbs on thick-cut artisan toast</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹170</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-eggtoast" data-name="Egg &amp; Cheese Toast" data-price="170">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Pasta Aglio e Olio</h4>
+                                    <p class="menu-item-desc">Al dente spaghetti tossed with garlic, olive oil, chilli flakes, and parmesan</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹240</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-pasta" data-name="Pasta Aglio e Olio" data-price="240">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Margherita Toast Pizza</h4>
+                                    <p class="menu-item-desc">Crispy base with San Marzano tomato sauce, fresh mozzarella, and basil</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹260</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-pizza" data-name="Margherita Toast Pizza" data-price="260">+</button>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">French Fries</h4>
+                                    <p class="menu-item-desc">Golden thin-cut fries seasoned with sea salt and paprika, served with dip</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹130</span>
+                                    <button class="btn-add-item btn-add-square" data-id="food-fries" data-name="French Fries" data-price="130">+</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-items-container">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">The 1327 Brownie</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹110</span>
-                                <button class="btn-add-item" data-id="dessert-brownie" data-name="The 1327 Brownie" data-price="110">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Our legendary dense, fudgy brownie — warm from the oven, with a glossy crust. World class.</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Blueberry Cheesecake</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹140</span>
-                                <button class="btn-add-item" data-id="dessert-cheesecake" data-name="Blueberry Cheesecake" data-price="140">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">New York-style baked cheesecake with a fresh blueberry compote</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Tiramisu</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹160</span>
-                                <button class="btn-add-item" data-id="dessert-tiramisu" data-name="Tiramisu" data-price="160">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Classic Italian dessert with mascarpone, espresso-soaked ladyfingers, and cocoa</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Affogato</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹130</span>
-                                <button class="btn-add-item" data-id="dessert-affogato" data-name="Affogato" data-price="130">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">A scoop of vanilla gelato drowned in a freshly pulled espresso shot</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Category: Food -->
-                <div class="menu-category-block">
-                    <div class="menu-category-header">
-                        <span class="menu-category-icon">🥪</span>
-                        <span class="menu-category-title">Food &amp; Bites</span>
-                    </div>
-                    <div class="menu-items-container">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Grilled Chicken Sandwich</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹220</span>
-                                <button class="btn-add-item" data-id="food-chickensandwich" data-name="Grilled Chicken Sandwich" data-price="220">+ Add</button>
+                    <!-- Column 4: Beverages -->
+                    <div class="menu-column">
+                        <h3 class="menu-column-header">Beverages</h3>
+                        <div class="menu-items-container">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Fresh Lime Soda</h4>
+                                    <p class="menu-item-desc">Chilled sparkling water with fresh lime juice, choice of sweet or salted</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹90</span>
+                                    <button class="btn-add-item btn-add-square" data-id="bev-limesoda" data-name="Fresh Lime Soda" data-price="90">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Herb-marinated grilled chicken, lettuce, tomato, and garlic aioli on toasted sourdough</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Veggie Club</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹190</span>
-                                <button class="btn-add-item" data-id="food-veggieclub" data-name="Veggie Club" data-price="190">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Mango Lassi</h4>
+                                    <p class="menu-item-desc">Thick, creamy blend of Alphonso mango pulp and chilled yogurt</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹120</span>
+                                    <button class="btn-add-item btn-add-square" data-id="bev-mangolassi" data-name="Mango Lassi" data-price="120">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Roasted bell pepper, avocado spread, cucumber, and cream cheese on multigrain bread</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Egg &amp; Cheese Toast</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹170</span>
-                                <button class="btn-add-item" data-id="food-eggtoast" data-name="Egg &amp; Cheese Toast" data-price="170">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Iced Tea</h4>
+                                    <p class="menu-item-desc">House-brewed black tea with lemon and mint, lightly sweetened</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹100</span>
+                                    <button class="btn-add-item btn-add-square" data-id="bev-icedtea" data-name="Iced Tea" data-price="100">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Scrambled eggs, cheddar, and herbs on thick-cut artisan toast</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Pasta Aglio e Olio</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹240</span>
-                                <button class="btn-add-item" data-id="food-pasta" data-name="Pasta Aglio e Olio" data-price="240">+ Add</button>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4 class="menu-item-name">Hot Chocolate</h4>
+                                    <p class="menu-item-desc">Premium Belgian cocoa with steamed milk, topped with marshmallows</p>
+                                </div>
+                                <div class="menu-item-action">
+                                    <span class="menu-item-price">₹150</span>
+                                    <button class="btn-add-item btn-add-square" data-id="bev-hotchocolate" data-name="Hot Chocolate" data-price="150">+</button>
+                                </div>
                             </div>
-                            <p class="menu-item-description">Al dente spaghetti tossed with garlic, olive oil, chilli flakes, and parmesan</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Margherita Toast Pizza</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹260</span>
-                                <button class="btn-add-item" data-id="food-pizza" data-name="Margherita Toast Pizza" data-price="260">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Crispy base with San Marzano tomato sauce, fresh mozzarella, and basil</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">French Fries</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹130</span>
-                                <button class="btn-add-item" data-id="food-fries" data-name="French Fries" data-price="130">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Golden thin-cut fries seasoned with sea salt and paprika, served with dip</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Category: Beverages -->
-                <div class="menu-category-block">
-                    <div class="menu-category-header">
-                        <span class="menu-category-icon">🥤</span>
-                        <span class="menu-category-title">Beverages</span>
-                    </div>
-                    <div class="menu-items-container">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Fresh Lime Soda</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹90</span>
-                                <button class="btn-add-item" data-id="bev-limesoda" data-name="Fresh Lime Soda" data-price="90">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Chilled sparkling water with fresh lime juice, choice of sweet or salted</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Mango Lassi</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹120</span>
-                                <button class="btn-add-item" data-id="bev-mangolassi" data-name="Mango Lassi" data-price="120">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Thick, creamy blend of Alphonso mango pulp and chilled yogurt</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Iced Tea</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹100</span>
-                                <button class="btn-add-item" data-id="bev-icedtea" data-name="Iced Tea" data-price="100">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">House-brewed black tea with lemon and mint, lightly sweetened</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 class="menu-item-title">Hot Chocolate</h4>
-                                <span class="menu-item-divider"></span>
-                                <span class="menu-item-price">₹150</span>
-                                <button class="btn-add-item" data-id="bev-hotchocolate" data-name="Hot Chocolate" data-price="150">+ Add</button>
-                            </div>
-                            <p class="menu-item-description">Premium Belgian cocoa with steamed milk, topped with marshmallows</p>
                         </div>
                     </div>
                 </div>
